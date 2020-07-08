@@ -1,8 +1,12 @@
 //importing express
 const express = require('express');
+const connectDB = require('./config/db');
 
 //intialize app varaible with express
 const app = express();
+
+//Connect Database
+connectDB();
 
 //get the request and then send the
 app.get('/', (req, res) => res.send('API Running'));
